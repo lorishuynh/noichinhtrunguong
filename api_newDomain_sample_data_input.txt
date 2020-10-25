@@ -1,0 +1,58 @@
+Structured array input data:
+
+array (
+  'zKey' => 'ab63c78612950a48541085e80a09a9b4',
+  'accountID' => 7969,
+  'registerList' => array (
+						0 => array (
+						  'domainName' => 'test-register-domain-01',
+						  'tld' => 'com',
+						  'quantity' => '1',
+						),
+  ),
+  'dataContact' => array (
+		'Role' => 'I',
+		'LastName' => 'Nguyễn Văn',
+		'FirstName' => 'An',
+		'Email' => 'sample@domain.com',
+		'Organization' => 'Công ty CP GMO-Z.com RUNSYSTEM',
+		'phone_code' => '84',
+		'CountryName' => 'VN',
+		'City' => 'Hà Nội',
+		'State' => 'HNI',
+		'Street1' => 'Địa chỉ 1',
+		'Street2' => 'Địa chỉ 2',
+		'Phone' => '0430008888',
+		'NationCode' => '121231231233',
+  ),
+)
+
+
+--->convert to json format before post through api:
+
+{
+    "zKey": "ab63c78612950a48541085e80a09a9b4",
+    "accountID":7969,
+    "registerList" :[
+		  {
+		   "domainName":"test-register-domain-01",
+			   "tld":"com",
+			   "quantity":"1"
+		  }
+    ],
+    "dataContact":{
+					"Role":"I",
+					 "LastName":"Nguyễn Văn",
+					 "FirstName":"An",
+					"Email":"sample@domain.com",
+					"Organization":"Công ty CP GMO-Z.com RUNSYSTEM",
+					"phone_code":"84",
+					"CountryName":"VN",
+					"City":"Hà Nội",
+					"State":"HNI",
+					"Street1":"Địa chỉ 1",
+					"Street2":"Địa chỉ 2",
+					"Phone":"0430008888",
+				   "NationCode":"121231231233"
+			  }
+}
